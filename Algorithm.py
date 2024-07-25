@@ -12,11 +12,12 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # Load the dataset
-df = pd.read_csv('IMDB Dataset.csv')
+df = pd.read_csv('IMDB_Dataset.csv')
 
 # Preprocess the text
 nltk.download('stopwords')
 stop_words = set(stopwords.words('english'))
+
 def preprocess_text(text):
     text = text.lower()
     text = ''.join([char for char in text if char not in string.punctuation])
